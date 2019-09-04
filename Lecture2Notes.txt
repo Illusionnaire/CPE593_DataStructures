@@ -1,0 +1,39 @@
+-Learn Boyer-Moore and LCS from Lecture 1.
+
+Finite State Machine
+- Need to implement something that tells you to do something at this state. Much easier to make efficient in hardware than in software.
+- Backload it and create a state machine variable to use. Do not keep creating it because it is inefficient that way.
+- These are the way to implement regex checking.
+
+
+- Boyer-Moore is the fastest single string
+    m = number of words
+    k = length of targets
+    n = length of source
+O(n/k * m)
+
+Regular expressions -> finite state machines are optimal
+Review of Regex:
+ a == specific letter
+ [aei] == a or e or i
+ [a-z]+ == multiple letters
+ [A-Za-z]+ == multiple letters in order, with capitals
+ a* = (zero or no occurances)
+ a+ = at least one a = aa*
+ a? = optional one or no occurances
+ cat|dog = one or the other
+
+LCS asks: how similar is this string to that string. Tell me the length that they have in common.
+EditDistance asks, tell me how much effort it would take to turn this string into that string. 
+    - Operations insert, delete, replace characters.
+
+-Number theoretic algorithms
+Eratosthenes founded an algorithm to find Primes that is fast to do.
+O(n log log n)
+
+Euclid: Greatest Common Denominator (GCD), Lowest Common Multiple (LCM), Power (x^n)
+    - Greatest common denominator is log_phi(n) --> reverse fibonnaci
+    - Lowest common multiple is 1+log_phi(n) because it uses GCD. 
+
+Big Arithmetic:
+- Power Function, Fermat
