@@ -52,6 +52,8 @@ void selectionSort(int x[], int n){
 
 InsertionSort: Make n comparisons. With the newest one, check for bigger ones and move those to the right of it and slot it into the right spot 
 O(N^2)
+
+Code does not work, but if solved, give to Kruger for extra homework credits
 -------------
 void insertionSort(int x[], int n){
     for(int i = 1; i < n; i++){
