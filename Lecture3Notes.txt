@@ -1,0 +1,69 @@
+Miller-Rabin primality test:
+- checks to see if a number is prime or not by splitting a number into binary and then taking two chunks, a completely 2^s part and a d part that are factors of the (number - 1)
+
+-Sorting algorithms
+-When testing for sorting algorithms, seed with a random number generator so that the values are always the same to standardize the benchmarks done
+
+BubbleSort O(N^2)
+------------
+void bubblesort(int x[], int n){
+    for(int j = 0; j < n-1;j++){
+        for(int i = 0; i < n-1-j; i++)
+        if(x[i] > x[i+1]){
+            int temp = x[i];
+            x[i] = x[i+1];
+            x[i+1] = temp;
+        }
+    }
+}
+
+Improved BubbleSort O(N^2) Omega(n)
+---------------
+void improvedbubblesort(int x[], int n){
+    for (int j = 0; j < n-1;j++){
+        bool sorted = true;
+        for (int i = 0; i < n-1-j;i++) {
+            if( x[i] > x[i+1]){
+                int temp = x[i];
+                x[i] = x[i+1];
+                x[i+1] = temp;
+                sorted = false;
+            }
+        if (sorted)
+            return
+        }
+    }
+}
+
+SelectionSort: Make n comparisons and see what is the biggest number and at the end of all comparison's for that N, swap it with the last spot.
+Always O(N^2)
+-----------------
+void selectionSort(int x[], int n){
+    for (int j = n - 1; j > 0; j--){
+        int pos = 0;
+        for(int i = 1; i <= j; i++){
+            if x[i] > x[pos])
+                pos = i;
+        }
+        if (j != pos)
+            swap(x[pos],x[j]);
+    }
+}
+
+InsertionSort: Make n comparisons. With the newest one, check for bigger ones and move those to the right of it and slot it into the right spot 
+O(N^2)
+-------------
+void insertionSort(int x[], int n){
+    for(int i = 1; i < n; i++){
+        int temp = x[i];
+        for(int i-1; j >= 0; j--){
+            if (x[j] > temp){
+                x[j+1] = x[j]; 
+            }
+            else{
+                x[j] = temp;
+                break;
+            }
+            x[0] = temp;
+    }
+}

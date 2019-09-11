@@ -37,3 +37,17 @@ Euclid: Greatest Common Denominator (GCD), Lowest Common Multiple (LCM), Power (
 
 Big Arithmetic:
 - Power Function, Fermat
+
+
+powermod:
+powermod(x, n, m){
+prod = 1;
+while n > 0 {
+    if (n mod 2 != 0){
+        prod = (prod * x) * mod m;
+    }
+    x = (x*x) mod m;
+    n = n /2;
+}
+return prod;
+}
