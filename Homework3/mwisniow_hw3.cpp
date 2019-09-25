@@ -64,8 +64,12 @@ int main(int argc, char *argv[]){
     n = atoi(argv[1]);
     k = atoi(argv[2]);
 
+    if(n < 2){
+        cout << n << " is not prime. ";
+    }
+    else{
     prime = MillerRabin(n,k);
-
+    }
     if (prime){
         cout << n << " is prime.";
     }
