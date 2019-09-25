@@ -2,6 +2,8 @@
     Author: Marcin Wisniowski
 
     I pledge my honor that I have abided by the Stevens Honor System
+
+    Insert 
 */
 
 
@@ -30,8 +32,15 @@ int lcm(int a, int b){
 }
 
 int powermod(int a, int b, int r){
-    
-
+    int prod = 1;
+    while (b > 0) {
+        if (b % 2 != 0){
+            prod = (prod * a) % r;
+        }
+        a = (a*a) % r;
+        b = b / 2;
+    }
+    return prod;
 }
 
 int main(int argc, char *argv[]){

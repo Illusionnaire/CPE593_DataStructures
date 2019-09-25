@@ -1,0 +1,26 @@
+https://docs.google.com/document/d/10NLsSXX95QU_zduEl1BOEzE0Xp5bjt-R1QQv26URPwE/edit
+
+Linear Search: Just check through every single position and see if you found your data.
+
+Binary Search: First sort your data. Then, because it is sorted, you can use a log(n) approach by using divide and conquer by halfway inbetween. Keep finding a midpoint and changing left and right bounds, until Left and Right bounds are exact. If still not found when left = right, then stop, not found.
+
+Bisection Search: Same as binary search, but with a function and floating points instead. You need to declare an epsilon in which your error is small enough for you to accept.
+
+binarySearch(x,target){
+    L = 0;
+    R = list.length - 1;
+    while(L <= R){
+        mid = (L+R)/2;
+        if (x[mid] > target){
+            R = mid -1;
+        }
+        if (x[mid] < target){
+            L = mid +1;
+        }
+        else{
+            return mid;
+        }
+    }
+}
+
+Golden Section Search: Allows you to search with the minimum number of function calls for any unimodal function. Uses four points to zone in on the maximum you are looking for.
