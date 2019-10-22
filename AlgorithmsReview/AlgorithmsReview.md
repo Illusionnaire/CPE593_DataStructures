@@ -9,13 +9,11 @@ Beyond the scope of this document, a student should also know how to find the or
 
 ### Code
 Complexity order: O(log(n)) since each division cuts the value.
-<code>
-    int GCD(a, b){
-        if(b == 0){
-            return a;
-        }
-        return (b, a % b)
-    }
 
-</code>
+>   int GCD(a, b){
+>       if(b == 0){
+>           return a;
+>       }
+>       return (b, a % b)
+>   }
 
